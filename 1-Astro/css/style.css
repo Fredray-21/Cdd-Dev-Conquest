@@ -2,22 +2,31 @@
   font-family: "Evolve_EVO";
   src: url("../fonts/MADE-Evolve-Sans-Medium-EVO.396833b.otf");
 }
+
 @font-face {
   font-family: "Evolve_Thin";
   src: url("../fonts/MADE-Evolve-Sans-Thin.e8c3adb.otf");
 }
+
 @font-face {
   font-family: "Evolve_normal";
   src: url("../fonts/MADE-Evolve-Sans-Medium.f22e150.otf ");
 }
+
 @font-face {
   font-family: "Helios";
   src: url("../fonts/Helios-Rounded.8261b41.woff ");
 }
 
+@font-face {
+  font-family: "Voyager";
+  src: url("../fonts/Voyager-Heavy.1eb3601.woff");
+}
+
 :root {
   --rose: #d6415e;
   --purple: #7b4ef0;
+  --light-purple: #9975f3;
   --gray: #7d7d7d;
   --light-gray: #181818;
   --dark-gray: #0a0a0a;
@@ -28,13 +37,17 @@
   color: #fff;
   background: var(--purple);
 }
+
 ::selection {
   color: #fff;
   background: var(--purple);
 }
+
+/* Designing for scroll-bar */
 ::-webkit-scrollbar {
   display: none;
 }
+
 
 html {
   font-family: "Evolve_normal", arial, sans-serif;
@@ -43,9 +56,14 @@ html {
   width: 100vw;
   height: 100vh;
 }
+
 body {
   margin: 0;
-  padding: 0 10vw 0 10vh;
+}
+
+#home {
+  margin: 0;
+  padding: 0 10vw 10vh 10vw;
 }
 
 #row-home {
@@ -143,6 +161,7 @@ a {
 .diamond_separator {
   margin: 0 2rem;
 }
+
 .diamond_separator::before {
   content: "";
   height: 0.6rem;
@@ -238,3 +257,142 @@ a {
   letter-spacing: 0.05rem;
 }
 
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card_channel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_channel_content {
+  border: solid 1px #fff;
+  width: 60vw;
+  text-align: center;
+  transform: skew(-25deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card_channel_left .card_channel_content {
+  padding: 1rem 8rem 1rem 2rem;
+  margin: 5rem 0 5rem 10rem;
+}
+
+.card_channel_right .card_channel_content {
+  padding: 1rem 2rem 1rem 8rem;
+  margin: 5rem 10rem 5rem 0;
+}
+
+
+.card_channel_content:hover {
+  background-color: var(--light-gray);
+
+}
+
+.card_channel_content p {
+  transform: skew(25deg);
+}
+
+.card_channel_content .card_channel_title {
+  width: 80%;
+  font-family: Voyager, arial, sans-serif;
+  /* not good font*/
+  font-size: 2rem;
+  border-bottom: solid 1px var(--gray);
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.card_channel_desc p {
+  font-family: Evolve_Thin, arial, sans-serif;
+  padding-top: 1rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.card_channel_left img {
+  z-index: 4;
+  width: 400px;
+  position: relative;
+  left: -8rem;
+  top: 0;
+}
+
+.card_channel_right img {
+  z-index: 4;
+  width: 400px;
+  position: relative;
+  left: 5rem;
+  top: 0;
+}
+
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 25vh;
+  background-color: var(--dark-gray);
+}
+
+footer table thead td {
+  padding: 0.5rem 8rem;
+}
+
+footer table thead {
+  font-family: Evolve_EVO;
+  font-size: 1.2em;
+}
+
+footer table tbody td li {
+  margin: 4px;
+  color: var(--purple);
+  cursor: pointer;
+}
+
+footer table tbody td li:hover {
+  color: var(--light-purple);
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: zindex-fixed;
+}
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  height: 8px;
+  display: block;
+  z-index: 10;
+}
+.progress-bar {
+  background: linear-gradient(90deg, var(--purple), var(--rose));
+  width: 0%;
+  display: block;
+  height: inherit;
+}

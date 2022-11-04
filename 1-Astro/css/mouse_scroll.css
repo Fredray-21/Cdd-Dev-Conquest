@@ -1,9 +1,8 @@
 .mouse_scroll {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   width: 24px;
   height: 100px;
-  margin-top: 125px;
 }
 
 .m_scroll_arrows {

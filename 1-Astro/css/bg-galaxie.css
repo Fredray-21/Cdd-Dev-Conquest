@@ -1,6 +1,6 @@
 .galaxy {
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: -5;
@@ -8,7 +8,7 @@
     height: 100%;
     -webkit-perspective: 340px;
     perspective: 340px;
-    opacity: .4;
+    opacity: 0.8;
 }
 
 .stars {
