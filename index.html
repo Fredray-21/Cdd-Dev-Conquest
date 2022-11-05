@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Projets</title>
+</head>
+
+<body>
+  <h1 id="title">Liste des Projets</h1>
+
+  <div id="list">
+    <div class="card_project">
+      <h1>Astro</h1>
+      <img class="logo" src="./1-Astro/assets/logo_circle.png" alt="">
+      <a href="./1-Astro/Maquette Web/Maquette.png" target="_blank">Voir la Maquette</a>
+      <a href="./1-Astro/index.html" target="_blank">Voir le Résultat </a>
+    </div>
+
+
+  </div>
+
+
+  <style>
+    body {
+      background-color: #1b1b1b;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    body h1#title {
+      color: #fff;
+      font-size: 3rem;
+    }
+
+    #list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    #list h1 {
+      font-size: 2rem;
+      margin: .8rem 0 0 0;
+    }
+
+    .card_project {
+      width: 300px;
+      height: 300px;
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card_project h1 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .card_project p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .card_project img.logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+
+    .card_project a {
+      display: block;
+      margin: 10px;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+
+    .card_project a:hover {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+  </style>
+</body>
+
+
+
+</html>
