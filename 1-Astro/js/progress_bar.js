@@ -19,7 +19,6 @@ function scrollProgressBar() {
         progressBar.style.width = getWidth();
     };
     document.addEventListener("scroll", () => {
-        console.log("scroll");
         setWidth();
     });
     window.addEventListener("resize", () => {
