@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Exposez le port sur lequel votre application écoute
-EXPOSE 8080
+EXPOSE 5000
 
 # Démarrez un serveur HTTP Python pour servir le fichier index.html
-CMD ["python", "-m", "http.server", "8080"]
+CMD ["python", "-m", "http.server", "5000"]

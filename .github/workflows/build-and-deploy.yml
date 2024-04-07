@@ -47,4 +47,4 @@ jobs:
             docker pull ghcr.io/${{ steps.convert_repository.outputs.owner }}/${{ steps.convert_repository.outputs.repo }}:${{ github.sha }}
             docker stop conquest_website || true
             docker rm conquest_website || true
-            docker run -d --name conquest_website -p 5000:8080 ghcr.io/${{ steps.convert_repository.outputs.owner }}/${{ steps.convert_repository.outputs.repo }}:${{ github.sha }}
+            docker run -d --name conquest_website -p 5000:5000 ghcr.io/${{ steps.convert_repository.outputs.owner }}/${{ steps.convert_repository.outputs.repo }}:${{ github.sha }}
